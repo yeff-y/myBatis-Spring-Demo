@@ -1,0 +1,12 @@
+com\glodon\demo\mybatis\models\User.class
+com\glodon\demo\mybatis\mappers\SimsStudentMapper.class
+com\glodon\demo\mybatis\models\Sex.class
+com\glodon\demo\mybatis\dtos\UserProps.class
+com\glodon\demo\mybatis\controllers\UserController.class
+com\glodon\demo\mybatis\Application.class
+com\glodon\demo\mybatis\models\SimsClass.class
+com\glodon\demo\mybatis\mappers\SimsClassMapper.class
+com\glodon\demo\mybatis\models\SimsStudent.class
+com\glodon\demo\mybatis\mappers\UserMapper.class
+com\glodon\demo\mybatis\dtos\SimsStudentDto.class
+com\glodon\demo\mybatis\models\StudentWithClass.class
