@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="DB2Tables" defaultModelType="flat" targetRuntime="MyBatis3Simple">
+        <commentGenerator>
+            <!-- 抑制警告 -->
+            <property name="suppressTypeWarnings" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="false"/>
+            <property name="javaFileEncoding" value="UTF-8"/>
+        </commentGenerator>
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/yeffdb?useUnicode=true&amp;characterEncoding=utf8"
+                        userId="root" password="123456">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--生成Model类存放位置-->
+        <javaModelGenerator targetPackage="com.glodon.demo.mybatis.models" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+            <!--<property name="constructorBased" value="true"/>-->
+        </javaModelGenerator>
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="com.glodon.demo.mybatis.mappers" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成Dao类存放位置-->
+        <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码
+                type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+                type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+                type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.glodon.demo.mybatis.mappers" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <table tableName="sims_student" domainObjectName="SimsStudent"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+<!--            <generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_class" domainObjectName="SimsClass"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_college" domainObjectName="SimsCollege"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_instruct" domainObjectName="SimsInstruct"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_lesson" domainObjectName="SimsLesson"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_major" domainObjectName="SimsMajor"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+
+        <table tableName="sims_teacher" domainObjectName="SimsTeacher"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="JDBC"/>
+            <!--            <columnOverride column="sex" javaType="com.glodon.demo.mybatis.models.Sex" />-->
+        </table>
+    </context>
+</generatorConfiguration>
